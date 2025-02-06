@@ -62,8 +62,8 @@ def ReadASI_TIF_FITS(
         image_bayer = None
 
     else:
-        hdul = fits.open(asi_tif_fp)
-        image_bayer = deepcopy(hdul[0].data)
+        with fits.open(asi_tif_fp) as hdul:
+            image_bayer = deepcopy(hdul[0].data)
         image_rgb16 = cv2.cvtColor(image_bayer, cv2.COLOR_BAYER_RG2BGR)
 
     # sanity check

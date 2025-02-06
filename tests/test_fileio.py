@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Copyright: Multiple Authors
 #
 # This file is part of AstroComPYute. https://github.com/Daniel-Champion/AstroComPYute
@@ -48,3 +49,6 @@ class TestIO(unittest.TestCase):
     def test_cr(self):
         """ensure cr2/cr3 compatibility"""
         self.skipTest("TODO: Write test for Canon images. No valid writer known.")
+
+if __name__ == "__main__":
+    unittest.main()
